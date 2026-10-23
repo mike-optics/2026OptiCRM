@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #182230;
+  background: #f6f7f9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  --ink: #182230;
+  --muted: #758092;
+  --line: #e8ebef;
+  --panel: #ffffff;
+  --navy: #142b45;
+  --teal: #2b8c83;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-width: 320px; min-height: 100vh; }
+button, input { font: inherit; }
+button { cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+::selection { background: #d9eeeb; }
+
+.app-shell { min-height: 100vh; display: grid; grid-template-columns: 248px minmax(0, 1fr); }
+.sidebar { background: #142b45; color: #dbe4ee; padding: 25px 16px 18px; display: flex; flex-direction: column; min-height: 100vh; }
+.brand { display: flex; align-items: center; gap: 11px; padding: 0 10px 29px; color: #fff; }
+.brand-mark { width: 35px; height: 35px; display: grid; place-items: center; border-radius: 11px; background: #3d958c; color: white; font-size: 18px; font-weight: 700; }
+.brand-name { font-size: 16px; font-weight: 650; letter-spacing: -.3px; }
+.brand-sub { font-size: 10px; color: #9eafc1; letter-spacing: 1.35px; text-transform: uppercase; margin-top: 2px; }
+.nav-label { padding: 14px 11px 9px; color: #8396aa; font-size: 10px; font-weight: 700; letter-spacing: 1.15px; text-transform: uppercase; }
+.nav-list { display: grid; gap: 4px; }
+.nav-link { width: 100%; display: flex; align-items: center; gap: 12px; padding: 10px 11px; border: 0; border-radius: 8px; background: transparent; color: #b9c7d5; text-align: left; font-size: 13px; transition: .15s ease; }
+.nav-link:hover { background: #203b58; color: #fff; }
+.nav-link.active { background: #294761; color: #fff; box-shadow: inset 2px 0 #69b8ac; }
+.nav-count { margin-left: auto; font-size: 10px; color: #9eb0c1; }
+.sidebar-bottom { margin-top: auto; }
+.practice-card { margin: 18px 5px 13px; padding: 13px; border: 1px solid #34506a; border-radius: 10px; background: #1b3854; }
+.practice-card strong { display: block; font-size: 12px; color: #fff; margin-bottom: 4px; }
+.practice-card span { font-size: 11px; color: #aabaca; }
+.profile-mini { display: flex; align-items: center; gap: 10px; padding: 15px 8px 2px; border-top: 1px solid #304961; }
+.avatar-small { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 50%; background: #d7e7e5; color: #285b58; font-size: 11px; font-weight: 700; }
+.profile-mini strong { display: block; color: white; font-size: 11px; }
+.profile-mini span { display: block; color: #9eafc1; font-size: 10px; margin-top: 2px; }
+.main-area { min-width: 0; }
+.topbar { height: 72px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 0 38px; background: #fff; border-bottom: 1px solid var(--line); }
+.breadcrumb { color: #8b95a3; font-size: 12px; }
+.breadcrumb strong { color: #344154; font-weight: 600; }
+.top-actions { display: flex; align-items: center; gap: 17px; }
+.search-box { width: 245px; display: flex; align-items: center; gap: 8px; padding: 9px 11px; border: 1px solid #e7eaee; border-radius: 8px; color: #8792a0; background: #fafbfc; }
+.search-box input { width: 100%; min-width: 0; outline: none; border: 0; background: transparent; font-size: 11px; color: var(--ink); }
+.icon-button { width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #e8ebef; border-radius: 9px; background: white; color: #687586; }
+.content { max-width: 1500px; margin: 0 auto; padding: 34px 38px 52px; }
+.page-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 20px; margin-bottom: 26px; }
+.eyebrow { color: #82909e; font-size: 10px; font-weight: 700; letter-spacing: 1.3px; text-transform: uppercase; margin-bottom: 8px; }
+h1 { margin: 0; color: #172435; font-size: 27px; font-weight: 650; letter-spacing: -.8px; }
+.subheading { margin: 7px 0 0; color: #7c8795; font-size: 12px; }
+.primary-button { display: inline-flex; align-items: center; gap: 8px; padding: 10px 14px; border: 0; border-radius: 8px; background: #287f78; color: white; font-size: 11px; font-weight: 650; box-shadow: 0 2px 4px #287f7820; }
+.primary-button:hover { background: #216d67; }
+.metric-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 15px; margin-bottom: 22px; }
+.metric-card { padding: 17px 18px; border: 1px solid var(--line); border-radius: 11px; background: white; }
+.metric-top { display: flex; justify-content: space-between; align-items: center; color: #7b8795; font-size: 11px; }
+.metric-icon { width: 31px; height: 31px; display: grid; place-items: center; border-radius: 9px; background: #edf5f4; color: #31847c; }
+.metric-value { margin-top: 13px; color: #172435; font-size: 25px; font-weight: 650; letter-spacing: -.7px; }
+.metric-foot { margin-top: 5px; color: #8a95a2; font-size: 10px; }
+.metric-foot em { color: #2d8a72; font-style: normal; font-weight: 650; }
+.dashboard-grid { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(300px, 1fr); gap: 17px; align-items: start; }
+.panel { min-width: 0; border: 1px solid var(--line); border-radius: 11px; background: white; }
+.panel-header { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 17px 19px; border-bottom: 1px solid #edf0f3; }
+.panel-title { color: #253246; font-size: 13px; font-weight: 650; }
+.panel-subtitle { margin-top: 4px; color: #8a95a2; font-size: 10px; }
+.text-link { color: #32847c; font-size: 10px; font-weight: 650; }
+.appointment-list { padding: 2px 19px; }
+.appointment-row { display: grid; grid-template-columns: 52px 35px minmax(0, 1fr) auto; align-items: center; gap: 12px; padding: 14px 0; border-bottom: 1px solid #f0f2f4; }
+.appointment-row:last-child { border-bottom: 0; }
+.appointment-time { color: #687586; font-size: 11px; font-weight: 650; }
+.patient-avatar { width: 34px; height: 34px; display: grid; place-items: center; border-radius: 50%; background: #e9eff6; color: #526b88; font-size: 10px; font-weight: 700; }
+.patient-name { color: #263447; font-size: 11px; font-weight: 650; }
+.patient-detail { margin-top: 4px; color: #8a95a2; font-size: 10px; }
+.status { padding: 5px 8px; border-radius: 20px; background: #eef6f2; color: #43836b; font-size: 9px; font-weight: 650; white-space: nowrap; }
+.status.waiting { background: #fff5e7; color: #a9782d; }
+.status.confirmed { background: #eef2fa; color: #637ca4; }
+.activity-list { padding: 5px 19px 10px; }
+.activity-item { display: grid; grid-template-columns: 27px minmax(0, 1fr); gap: 10px; padding: 12px 0; }
+.activity-dot { width: 27px; height: 27px; display: grid; place-items: center; border-radius: 8px; background: #f0f4f7; color: #63788d; }
+.activity-copy { color: #536071; font-size: 10px; line-height: 1.55; }
+.activity-copy strong { color: #2d394a; font-weight: 650; }
+.activity-time { margin-top: 4px; color: #9aa3ad; font-size: 9px; }
+.lower-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 17px; margin-top: 17px; }
+.task-list { padding: 5px 19px 12px; }
+.task-row { display: flex; align-items: center; gap: 10px; padding: 11px 0; border-bottom: 1px solid #f0f2f4; }
+.task-row:last-child { border-bottom: 0; }
+.task-check { width: 15px; height: 15px; border: 1px solid #cbd3dc; border-radius: 5px; }
+.task-copy { flex: 1; color: #455264; font-size: 10px; }
+.task-copy small { display: block; color: #98a1ac; font-size: 9px; margin-top: 4px; }
+.priority { color: #ad7540; font-size: 9px; }
+.empty-note { padding: 20px; color: #8a95a2; font-size: 11px; }
+@media (max-width: 1100px) {
+  .app-shell { grid-template-columns: 215px minmax(0, 1fr); }
+  .content { padding: 28px 24px; }
+  .topbar { padding: 0 24px; }
+  .metric-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+  .app-shell { display: block; }
+  .sidebar { min-height: auto; padding: 13px 14px; }
+  .brand { padding: 0 4px 12px; }
+  .sidebar .nav-label, .sidebar-bottom, .nav-list { display: none; }
+  .sidebar:after { content: "Home  ·  Patients  ·  Appointments  ·  Tasks"; color: #c2cfda; font-size: 11px; padding: 8px 5px 2px; }
+  .topbar { height: 58px; padding: 0 16px; }
+  .search-box { width: min(52vw, 220px); }
+  .content { padding: 23px 15px 38px; }
+  .page-heading { align-items: flex-start; flex-direction: column; }
+  .dashboard-grid, .lower-grid { grid-template-columns: 1fr; }
+  .metric-grid { gap: 9px; }
+  .metric-card { padding: 13px; }
+  .metric-value { font-size: 22px; }
+}
